@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 import requests
 
+st.write('# Alpha Vantage stock price data')
+
 API_KEY = 'demo' # Replace it with real value
 
 # Ask user for stock symbol
@@ -21,7 +23,6 @@ symbol = data['Meta Data']['2. Symbol']
 last_refreshed = data['Meta Data']['3. Last Refreshed']
 
 # Display the collected data to user using Streamline functions
-st.write('# Alpha Vantage stock price data')
 st.write('## ' + information)
 st.write('### ' + symbol)
 st.write('### Last update: ' + last_refreshed)
